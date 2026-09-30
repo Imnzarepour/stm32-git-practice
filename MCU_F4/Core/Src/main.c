@@ -18,6 +18,7 @@
 /* USER CODE END Header */
 /* Includes ------------------------------------------------------------------*/
 #include "main.h"
+/* Git practice: LED test */
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
