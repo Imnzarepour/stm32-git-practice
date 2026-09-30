@@ -1,0 +1,103 @@
+site_name: مستندات فنی TCU — خودروی متصل سایپا
+site_description: معماری، Contractها و کد اسکلت Firmware واحد TCU پروژه خودروی متصل سایپا
+repo_url: http://192.168.4.251/connectedcar/connectedcarfirmware
+repo_name: connectedcarfirmware
+edit_uri: edit/master/docs/
+
+theme:
+  name: material
+  language: fa
+  direction: rtl
+  font: false
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: indigo
+      toggle:
+        icon: material/brightness-7
+        name: حالت تیره
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: indigo
+      toggle:
+        icon: material/brightness-4
+        name: حالت روشن
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.top
+    - navigation.indexes
+    - search.suggest
+    - search.highlight
+    - content.code.copy
+    - toc.follow
+
+markdown_extensions:
+  - tables
+  - footnotes
+  - attr_list
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.highlight
+  - pymdownx.inlinehilite
+  - toc:
+      permalink: true
+
+nav:
+  - خانه: index.md
+  - "۰۰ - معرفی پروژه":
+      - "RFP کارفرما (سایپایدک)": 00-project/rfp-saipa-connected-car.md
+      - "نقشه راه استقرار": 00-project/delivery-roadmap.md
+  - "۰۱ - یادداشت‌های معماری (تاریخی)":
+      - "معرفی کلی پروژه و معماری": 01-architecture-notes/00-project-overview-notes.md
+      - "الزامات و محدوده اولیه": 01-architecture-notes/01-preliminaries-notes.md
+      - "یادداشت‌های اولیه GPS": 01-architecture-notes/02-gps-early-notes.md
+      - "ماشین‌حالت — بخش ۱": 01-architecture-notes/03-state-machine-part1.md
+      - "ماشین‌حالت — بخش ۲": 01-architecture-notes/04-state-machine-part2.md
+      - "معماری Interface": 01-architecture-notes/05-interface-architecture.md
+      - "معماری Event/Queue": 01-architecture-notes/06-event-queue-architecture.md
+      - "معماری کلی": 01-architecture-notes/07-overall-architecture.md
+      - "الگوی Provider": 01-architecture-notes/08-provider-pattern.md
+      - "خلاصه Health/Recovery": 01-architecture-notes/09-health-recovery-summary.md
+      - "نقشه ردیابی و قراردادهای ارتباطی": 01-architecture-notes/10-traceability-and-communication-contracts.md
+  - "۰۲ - قرارداد Managementها":
+      - "الگوی مشترک State/Operation/Process": 02-management-contracts/state-operation-contract.md
+      - "قرارداد مشترک درخواست Reset": 02-management-contracts/reset-request-contract.md
+      - "System Management": 02-management-contracts/system-management.md
+      - "Power Management": 02-management-contracts/power-management.md
+      - "Hardware Input Management": 02-management-contracts/hardware-input-management.md
+      - "Hardware Input I/O — Draft A ⚠️": 02-management-contracts/hardware-input-io-contract-DRAFT-A.md
+      - "Hardware Input I/O — Draft B ⚠️": 02-management-contracts/hardware-input-io-contract-DRAFT-B.md
+      - "Diagnostic Management": 02-management-contracts/diagnostic-management.md
+      - "GPS Management": 02-management-contracts/gps-management.md
+      - "Server Management": 02-management-contracts/server-management.md
+      - "SMS Management": 02-management-contracts/sms-management.md
+      - "Call Management": 02-management-contracts/call-management.md
+      - "Firmware Update Management": 02-management-contracts/firmware-update-management.md
+      - "Actuator Management": 02-management-contracts/actuator-management.md
+      - "قرارداد TCU ↔ Backend (هکار)": 02-management-contracts/backend-contract-tcu-hekar.md
+      - "پروتکل باینری نهایی": 02-management-contracts/binary-protocol-final.md
+  - "۰۳ - قرارداد Infrastructureها":
+      - "فهرست کلی زیرساخت‌ها": 03-infrastructure-contracts/common-infrastructure-overview.md
+      - "Time Base": 03-infrastructure-contracts/time-base.md
+      - "Queue Infrastructure": 03-infrastructure-contracts/queue-infrastructure.md
+      - "Configuration Infrastructure": 03-infrastructure-contracts/configuration-infrastructure.md
+      - "Memory / Storage Infrastructure": 03-infrastructure-contracts/memory-storage-infrastructure.md
+      - "NOR Flash Infrastructure ⚠️": 03-infrastructure-contracts/nor-flash-infrastructure.md
+      - "File Transfer Infrastructure": 03-infrastructure-contracts/file-transfer-infrastructure.md
+      - "Log Infrastructure": 03-infrastructure-contracts/log-infrastructure.md
+      - "Driver Layer": 03-infrastructure-contracts/driver-layer.md
+      - "Hardware Proxy": 03-infrastructure-contracts/hardware-proxy.md
+      - "EC200U Manager ⚠️ پیش‌نویس": 03-infrastructure-contracts/ec200u-manager.md
+      - "Bootloader": 03-infrastructure-contracts/bootloader.md
+      - "یکپارچه‌سازی با CubeIDE (Target Integration)": 03-infrastructure-contracts/target-integration.md
+      - "نقشه وابستگی Management ↔ Infrastructure": 03-infrastructure-contracts/management-infrastructure-dependency.md
+      - "مالکیت داده‌های مشترک": 03-infrastructure-contracts/shared-data-and-state.md
+  - "۰۴ - موارد باز":
+      - "موارد باز معماری ⚠️": 04-open-items/OPEN-ITEMS.md
+      - "قرارداد معماری — مسیرهای مرجع و مرزهای ممنوع": 04-open-items/architecture-contract.md
+  - "۰۵ - برون‌سپاری (تاریخی)":
+      - "EC200U (منسوخ به‌عنوان SOW فعال)": 05-outsourcing/ec200u-component-outsourcing-spec.md
+      - "اسپک NOR / Memory": 05-outsourcing/nor-storage-outsourcing-spec.md
+      - "الحاقیه NOR / Memory": 05-outsourcing/nor-storage-outsourcing-spec-addendum.md

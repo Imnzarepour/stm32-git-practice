@@ -1,0 +1,26 @@
+
+
+led
+	LED_GSM
+	LED_GPS
+	LED_SIM
+	LED_POWER
+
+input
+	ACC
+	DOOR
+	SHOCK
+	reserve_input
+
+output
+	ENGINE_CUTOFF
+	ALARM
+	BUZZER
+	reserve_output
+
+ADC
+	BATTERY_VOLTAGE
+	INTERNAL_BATHERY_VOLTAGE
+
+
+

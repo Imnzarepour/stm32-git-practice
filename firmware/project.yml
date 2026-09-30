@@ -1,0 +1,27 @@
+:project:
+  :build_root: build
+  :use_exceptions: FALSE
+  :use_mocks: TRUE
+  :use_test_preprocessor: :tests
+
+:cmock:
+  :plugins:
+    - :callback
+    - :ignore
+    - :ignore_arg
+    - :return_thru_ptr
+
+:paths:
+  :test:
+    - test/unit/**
+  :source:
+    - src/managements/**
+    - src/infrastructure/**
+    - src/shared/**
+  :include:
+    - include/**
+  :support:
+    - test/support/**
+
+:extension:
+  :executable: .exe
